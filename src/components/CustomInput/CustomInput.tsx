@@ -5,7 +5,7 @@ interface CustomInputProps {
     type: string;
     placeholder: string;
     required?: boolean;
-    icon?: string;  // Optional icon prop for dynamic image
+    icon?: string;  
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, required, icon }) => {
