@@ -1,7 +1,5 @@
-import { url } from 'inspector'
 import Image from 'next/image'
 import Link from 'next/link'
-import { title } from 'process'
 import React from 'react'
 
 export default function Footer() {
@@ -56,7 +54,7 @@ export default function Footer() {
   ]
   return (
     <footer className='bg-[#2B292A] py-20 px-4 md:px-7 lg:px-14'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-5 md:gap-0'>
         <div>
           <Link href="/">
             <Image src="/jeta-logo.svg" className="h-10 w-auto" alt="Logo" height={64} width={298} />

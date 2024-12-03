@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button/Button";
 
 interface MobileMenuProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,7 +16,7 @@ export default function MobileMenu({ setOpen }: MobileMenuProps) {
             <div>
                 <div className="flex justify-end items-center self-stretch">
                     <button onClick={() => setOpen(false)}>
-                        <img src="/close.svg" alt="Logo" className='h-6 w-auto' />
+                        <Image height={24} width={14} src="/close.svg" alt="Logo" className='h-6 w-auto' />
                     </button>
                 </div>
                 <nav>

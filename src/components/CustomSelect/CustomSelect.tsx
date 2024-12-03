@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface CustomSelectProps {
@@ -25,9 +26,11 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, required, icon, pl
                 ))}
             </select>
             {icon && (
-                <img
+                <Image
                     src={icon}
                     alt={'-icon'}
+                    height={16}
+                    width={16}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 cursor-pointer font-poppins"
                 />
             )}

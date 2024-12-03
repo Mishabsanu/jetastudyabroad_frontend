@@ -95,15 +95,15 @@ export default function Home() {
         <div className='swiper-pagination'></div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-next">
-            <img style={{
+            <Image style={{
               height: '24px',
-              width: '24px'
+                width: '24px'
             }} src={'/arrow-right-carousel.svg'} alt="arrow right" />
           </div>
         </div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-prev">
-            <img style={{
+            <Image style={{
               height: '24px',
               width: '24px'
             }} src={'/arrow-left-carousel.svg'} alt="arrow right" />

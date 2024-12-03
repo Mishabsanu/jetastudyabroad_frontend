@@ -1,0 +1,159 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Europe",
+                "info": "Europe offers top universities and a rich cultural experience, making it an ideal place for international students to pursue quality education."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.2551,
+                    54.5260
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "United Kingdom",
+                "info": "The UK is home to prestigious universities providing excellent education and a diverse cultural environment."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.4360,
+                    55.3781
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Canada",
+                "info": "Canada offers affordable education, welcoming communities, and opportunities for students to gain valuable hands-on experience."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.3468,
+                    56.1304
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Australia",
+                "info": "Known for its world-class education system, Australia provides excellent academic programs, research opportunities, and a high standard of life for the students."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    133.7751,
+                    -25.2744
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ireland",
+                "info": "Ireland is recognized for its top universities and friendly atmosphere, offering students a great education with a mix of tradition and modernity."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.6921,
+                    53.1424
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "USA",
+                "info": "The USA offers a wide range of programs at top-notch universities, known for its innovation, research opportunities, and diverse culture."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.7129,
+                    37.0902
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "New Zealand",
+                "info": "New Zealand is famous for its high-quality education and scenic beauty, providing an ideal environment for focused study and exploration."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    174.8860,
+                    -40.9006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dubai",
+                "info": "Dubai offers a unique blend of modern education and a dynamic cultural environment, making it an attractive destination for international students."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.296249,
+                    25.276987
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Uzbekistan",
+                "info": "Uzbekistan is gaining popularity for its emerging educational opportunities and rich history, offering students an affordable study experience."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    64.5853,
+                    41.3775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kyrgyzstan",
+                "info": "Kyrgyzstan provides affordable education with a focus on medical and engineering programs, perfect for students seeking an international degree."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.7661,
+                    41.2044
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kazakhstan",
+                "info": "Kazakhstan offers a diverse educational experience with increasing global recognition for its universities, especially in fields like engineering and health science."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    66.9237,
+                    48.0196
+                ]
+            }
+        }
+    ]
+}
