@@ -95,18 +95,12 @@ export default function Home() {
         <div className='swiper-pagination'></div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-next">
-            <Image style={{
-              height: '24px',
-                width: '24px'
-            }} src={'/arrow-right-carousel.svg'} alt="arrow right" />
+            <Image height={16} width={16} src={'/arrow-right-carousel.svg'} alt="arrow right" />
           </div>
         </div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-prev">
-            <Image style={{
-              height: '24px',
-              width: '24px'
-            }} src={'/arrow-left-carousel.svg'} alt="arrow right" />
+              <Image height={16} width={16} src={'/arrow-left-carousel.svg'} alt="arrow right" />
           </div>
         </div>
       </Swiper>
@@ -125,29 +119,29 @@ export default function Home() {
             <div className='space-y-5'>
               <div className='flex flex-col md:flex-row items-center gap-6'>
                 <CustomInput
-                  id="name"
+                  id="first name"
                   type="text"
                   placeholder="First Name*"
                   required
                 />
                 <CustomInput
-                  id="name"
-                  type="text"
-                  placeholder="Last Name*"
+                  id="email"
+                  type="email"
+                  placeholder="Email Address *"
                   required
                 />
               </div>
               <div className='flex flex-col md:flex-row items-center gap-6'>
                 <CustomInput
-                  id="name"
-                  type="text"
-                  placeholder="Email Address *"
+                  id="phone"
+                  type="tel"
+                  placeholder="Mobile Number *"
                   required
                 />
                 <CustomInput
-                  id="name"
+                  id="place"
                   type="text"
-                  placeholder="Mobile Number *"
+                  placeholder="Place *"
                   required
                 />
               </div>
@@ -157,28 +151,18 @@ export default function Home() {
                   options={countries}
                   required
                 />
-                <CustomSelect
-                  placeholder="When Do You Plan To Study?"
-                  options={countries}
+                <CustomInput
+                  id="qualification"
+                  type="text"
+                  placeholder="Qualification *"
                   required
                 />
               </div>
               <div className='flex flex-col md:flex-row items-center gap-6'>
-                <CustomSelect
-                  placeholder="Mode Of Counselling"
-                  options={countries}
-                  required
-                />
-                <CustomSelect
-                  placeholder="Fund Your Education?"
-                  options={countries}
-                  required
-                />
-              </div>
-              <div className='flex flex-col md:flex-row items-center gap-6'>
-                <CustomSelect
-                  placeholder="Preferred Study Level"
-                  options={countries}
+                <CustomInput
+                  id="address"
+                  type="text"
+                  placeholder="Address *"
                   required
                 />
               </div>
