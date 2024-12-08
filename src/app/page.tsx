@@ -27,6 +27,35 @@ export default function Home() {
     { value: 'georgia', label: 'Georgia' }
   ];
 
+  const bannerData = [
+    {
+      title: "360 Degree Solutions",
+      imageUrl: "hero.png",
+      description: "Comprehensive support covering every aspect of your study abroad journey, from admissions to settling in."
+    },
+    {
+      title: "99% Collateral Free Loan",
+      imageUrl: "hero.png",
+      description: "Achieve your dreams with our student loans covering up to 99% of costs, requiring no collateral."
+    },
+    {
+      title: "A Guide to Comfortable Accommodation",
+      imageUrl: "hero.png",
+      description: "Find the perfect housing options that offer comfort and convenience for students abroad."
+    },
+    {
+      title: "Access to Free Forex Trading Course",
+      imageUrl: "hero.png",
+      description: "Learn income-generating skills with our free forex trading course, from basics to advanced strategies."
+    },
+    {
+      title: "JETA Labs – Your Socializing Hub",
+      imageUrl: "hero.png",
+      description: "Connect with like-minded peers, build friendships, and grow personally in our vibrant social hub."
+    }
+  ];
+
+
   return (
     <>
     <section className=''>
@@ -47,68 +76,51 @@ export default function Home() {
         modules={[Pagination, Navigation]}
         autoHeight={true}
         className='relative'
-      >
-          <SwiperSlide>
-            <div
-              style={{
-                backgroundImage: 'url(/hero.png)',
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '580px', // Set a fixed height
-              }}
-              className="flex items-center text-white px-6 md:px-20 font-poppins"
-            >
-              <div className="max-w-[499px]">
-                <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                  Explore, Learn, Succeed with Jeta Study Abroad
-                </h1>
-                <p className="text-sm md:text-base font-roboto">
-                  Achieve your dreams with expert guidance. From top universities to a seamless transition overseas, we support your success every step of the way.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              style={{
-                backgroundImage: 'url(/hero.png)',
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '580px', // Ensure consistent height
-              }}
-              className="flex items-center text-white px-6 md:px-20 font-poppins"
-            >
-              <div className="max-w-[499px]">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                  Start Your Global Journey Today
-                </h2>
-                <p className="text-sm md:text-base font-roboto">
-                  Discover opportunities around the world. With tailored support and expert advice, your international education is within reach.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-
+        >
+          {
+            bannerData.map((banner, idx) => (
+              <SwiperSlide key={idx}>
+                <div
+                  style={{
+                    backgroundImage: `url(/${banner.imageUrl})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    height: '580px', // Set a fixed height
+                  }}
+                  className="flex items-center text-white px-6 md:px-20 font-poppins"
+                >
+                  <div className="max-w-[580px]">
+                    <h1 className="text-3xl md:text-5xl font-semibold mb-4">
+                      {banner.title}
+                    </h1>
+                    <p className="text-sm md:text-base font-roboto">
+                      {banner.description}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))
+          }
 
         <div className='swiper-pagination'></div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-next">
-            <Image height={16} width={16} src={'/arrow-right-carousel.svg'} alt="arrow right" />
+            <Image height={24} width={24} src={'/arrow-right-carousel.svg'} alt="arrow right" />
           </div>
         </div>
         <div className='hidden md:block'>
           <div className="swiper-button image-swiper-button-prev">
-              <Image height={16} width={16} src={'/arrow-left-carousel.svg'} alt="arrow right" />
+              <Image height={24} width={24} src={'/arrow-left-carousel.svg'} alt="arrow right" />
           </div>
         </div>
       </Swiper>
       </section>
-      <section className='px-4 md:px-7 lg:px-14 py-12'>
-        <h3 className='font-poppins text-3xl font-bold text-center mb-2'>Study Abroad free Assessment</h3>
-        <p className='max-w-[486px] mx-auto text-[#2B292A] text-lg font-roboto text-center'>
-          Fill in your details below to get a personalised advice
+      <section className='px-4 md:px-7 lg:px-14 py-20'>
+        <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3>
+        <p className='text-[#2B292A] text-lg font-roboto text-center max-w-[838px] mx-auto'>
+          Renowned for our unwavering integrity and excellence, JETA Study Abroad is one of the finest abroad education consultancies in Kerala. 
+          With our exceptional connections in prestigious universities around the globe, we provide end-to-end support, guiding students to secure their place and build a fulfilling future on their dream campuses.
         </p>
         <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-4'></div>
         <div className='grid grid-cols-1 md:grid-cols-2 max-w-[1290px] mt-10'>
@@ -236,6 +248,24 @@ export default function Home() {
           </div>
         </form>
       </section>
+      <section className="py-20 px-4 md:px-7 lg:px-14">
+        <div className="max-w-4xl mx-auto">
+          <div className="h-[500px] w-[500px] mx-auto">
+            <video
+              autoPlay
+              loop
+              muted
+              className="w-full pointer-events-none"
+              style={{ pointerEvents: "none" }}
+              preload="auto"  // Preloads video for faster startup
+            >
+              <source src="/jeta-study-abroad.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section className='py-20 px-4 md:px-7 lg:px-14'>
         <h4 className='text-3xl font-roboto font-semibold text-center'>
           Student Testimonials
