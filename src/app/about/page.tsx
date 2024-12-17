@@ -1,3 +1,4 @@
+import Button from '@/components/Button/Button';
 import ContactForm from '@/components/ContactForm'
 import Team from '@/components/Team';
 import Image from 'next/image'
@@ -97,6 +98,7 @@ export default function About() {
                             across all of India within the next two years, creating lifelong connections and
                             opportunities that enrich each student’s journey
                         </p>
+                        <Button text='Connect Now' className='w-fit mt-8' />
                     </div>
                 </div>
             </section>

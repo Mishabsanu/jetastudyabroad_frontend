@@ -9,6 +9,7 @@ body {
 .swiper-autoheight {
   height: 100% !important;
 }
+
 .swiper-testmonial-button {
   display: flex;
   position: static !important;

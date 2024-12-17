@@ -1,5 +1,10 @@
 'use client'
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
 import Button from '@/components/Button/Button';
 import Link from 'next/link';
 import dynamic from "next/dynamic";
@@ -44,9 +49,73 @@ export default function Home() {
     },
   ];
 
+
+  const bannerData = [
+    '/banner1.jpg',
+    '/banner2.jpg',
+    '/banner3.jpg',
+  ];
+
+
   return (
     <>
-      <HomeBanner />
+      <section>
+        <Swiper
+          slidesPerView={1}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: (_, className) => `<span class="${className}"></span>`,
+          }}
+          navigation={{
+            nextEl: '.image-swiper-button-next',
+            prevEl: '.image-swiper-button-prev',
+            disabledClass: 'swiper-button-disabled',
+          }}
+          modules={[Pagination, Navigation]}
+          className="relative"
+        >
+          {bannerData.map((imageUrl, idx) => (
+            <SwiperSlide key={idx} className="relative">
+              {/* Single Image */}
+              <Image
+                src={imageUrl}
+                alt={`Slide ${idx + 1}`}
+                width={1200}
+                height={400}
+                priority
+                className='w-full h-96 md:h-[calc(100vh-120px)] object-fill'
+              />
+            </SwiperSlide>
+          ))}
+
+          {/* Pagination */}
+          <div className="swiper-pagination"></div>
+
+          {/* Navigation */}
+          <div className="hidden md:block">
+            <div className="swiper-button image-swiper-button-next">
+              <Image
+                height={24}
+                width={24}
+                src="/arrow-right-carousel.svg"
+                alt="Next"
+              />
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="swiper-button image-swiper-button-prev">
+              <Image
+                height={24}
+                width={24}
+                src="/arrow-left-carousel.svg"
+                alt="Previous"
+              />
+            </div>
+          </div>
+        </Swiper>
+      </section>
+      {/* <HomeBanner /> */}
       <section className='px-4 md:px-7 lg:px-14 py-20'>
         <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3>
         <p className='text-[#2B292A] text-lg font-roboto text-center max-w-[838px] mx-auto'>
