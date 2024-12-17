@@ -8,14 +8,13 @@ export default function Nav() {
     const navLinks = [
         { name: 'Home', url: '/' },
         { name: 'About', url: '/about' },
-        { name: 'Services', url: '/services' },
-        { name: 'Contact Us', url: '/contact' },
+        { name: 'Blogs', url: '/blogs' },
     ];
 
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="sticky bg-white top-0 z-50 px-4 md:px-7 lg:px-14 py-3.5">
+        <nav className="sticky bg-white top-0 z-50 px-4 md:px-7 lg:px-14 py-3.5 shadow-2xl">
             <div className="flex justify-between items-center">
                 <div className="text-2xl font-bold">
                     <Link href="/">

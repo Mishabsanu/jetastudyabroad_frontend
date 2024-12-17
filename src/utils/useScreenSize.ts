@@ -1,30 +1,30 @@
 import { useState, useEffect } from 'react';
 
-const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState('');
+const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
 
     useEffect(() => {
-        const updateScreenSize = () => {
-            const width = window.innerWidth;
-
-            if (width < 640) {
-                setScreenSize('sm'); // Tailwind `sm` breakpoint: 640px
-            } else if (width >= 640 && width < 768) {
-                setScreenSize('md'); // Tailwind `md` breakpoint: 768px
-            } else if (width >= 768 && width < 1024) {
-                setScreenSize('lg'); // Tailwind `lg` breakpoint: 1024px
-            } else if (width >= 1024 && width < 1280) {
-                setScreenSize('xl'); // Tailwind `xl` breakpoint: 1280px
-            } else {
-                setScreenSize('2xl'); // Tailwind `2xl` breakpoint: 1536px and above
-            }
+        // Handler to call on window resize
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
         };
-        updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-        return () => window.removeEventListener('resize', updateScreenSize);
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
-    return screenSize;
+    return windowSize;
 };
 
-export default useScreenSize;
+export default useWindowSize;

@@ -1,7 +1,47 @@
+import ContactForm from '@/components/ContactForm'
+import Team from '@/components/Team';
 import Image from 'next/image'
 import React from 'react'
 
 export default function About() {
+    const teamMembers = [
+        {
+            image: '/AKASH.jpg',
+            name: 'Akash S M',
+            role: 'Vertical Head',
+        },
+        {
+            image: '/Adarsh.webp',
+            name: 'Adarsh P S',
+            role: 'Chief Executive Officer',
+        },
+        {
+            image: '/Adarsha.jpeg',
+            name: 'Adharsha K',
+            role: 'Destination Expert',
+        },
+        {
+            image: '/Sherin.jpg',
+            name: 'Shahla Sherin K. P',
+            role: 'Social Media Manager',
+        },
+        {
+            image: '/Jincy.jpeg',
+            name: 'Jincy Raj',
+            role: 'Counselor',
+        },
+        {
+            image: '/Janish.jpg',
+            name: 'Janish Jayan',
+            role: 'Chief Marketing Officer',
+        },
+        {
+            image: '/VISHNU.jpg',
+            name: 'Vishnu Aravindan',
+            role: 'HR Manager',
+        },
+    ];
+
     return (
         <>
             <section style={{
@@ -95,6 +135,12 @@ export default function About() {
                         </p>
                     </div>
                 </div>
+            </section>
+            <section className='px-4 md:px-7 lg:px-14 py-20'>
+                <ContactForm />
+            </section>
+            <section className='px-4 md:px-7 lg:px-14 py-20'>
+                <Team teamMembers={teamMembers} />
             </section>
         </>
     )

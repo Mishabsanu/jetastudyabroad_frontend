@@ -7,17 +7,39 @@ interface CustomInputProps {
     placeholder: string;
     required?: boolean;
     icon?: string;
+    label?: string; // Optional label for the input field
+    value?: string;
+    onChange?: React.ChangeEventHandler<HTMLInputElement>; // Handle input changes
+    error?: string; // Optional error message
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, required, icon }) => {
+const CustomInput: React.FC<CustomInputProps> = ({
+    id,
+    type,
+    placeholder,
+    required,
+    icon,
+    label,
+    value,
+    onChange,
+    error,
+}) => {
     return (
-        <div className="relative w-full mb-8">
+        <div className="relative w-full">
+            {label && (
+                <label htmlFor={id} className="text-sm font-medium text-gray-700 mb-2 block">
+                    {label}
+                </label>
+            )}
             <input
                 id={id}
                 type={type}
                 placeholder={placeholder}
                 required={required}
-                className={`border-b-2 font-poppins border-[#2B292A]/55 bg-transparent focus:outline-none focus:ring-0 py-2 w-full border-t-0 border-l-0 border-r-0 placeholder-inter text-black placeholder-black/55 ${icon ? 'pr-10' : ''}`} // Add padding if icon exists
+                value={value}
+                onChange={onChange}
+                className={`w-full py-2 px-3 border-b-2 font-poppins bg-transparent text-black placeholder-black/55 focus:outline-none focus:ring-0 ${icon ? 'pr-10' : ''
+                    } ${error ? 'border-red-500' : 'border-[#2B292A]/55'} placeholder-inter`}
             />
             {icon && (
                 <Image
@@ -25,9 +47,10 @@ const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, requir
                     alt={`${id}-icon`}
                     height={16}
                     width={16}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 cursor-pointer font-poppins"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 cursor-pointer"
                 />
             )}
+            {error && <p className="text-red-500 text-xs mt-1">{error}</p>} {/* Error message */}
         </div>
     );
 };

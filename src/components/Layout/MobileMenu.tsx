@@ -8,8 +8,7 @@ export default function MobileMenu({ setOpen }: MobileMenuProps) {
     const navLinks = [
         { name: 'Home', url: '/' },
         { name: 'About', url: '/about' },
-        { name: 'Services', url: '/services' },
-        { name: 'Contact Us', url: '/contact' },
+        { name: 'Blogs', url: '/blogs' },
     ];
     return (
         <div className='p-6 bg-white absolute top-6 left-0 z-50 w-full flex flex-col justify-between md:hidden'>
