@@ -43,6 +43,15 @@ export default function About() {
         },
     ];
 
+    const handleScrollToContact = () => {
+        const element = document.getElementById("contact-us");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.error("Element with ID 'contact-us' not found");
+        }
+    };
+
     return (
         <>
             <section style={{
@@ -98,7 +107,7 @@ export default function About() {
                             across all of India within the next two years, creating lifelong connections and
                             opportunities that enrich each student’s journey
                         </p>
-                        <Button text='Connect Now' className='w-fit mt-8' />
+                        <Button onClick={handleScrollToContact} text='Connect Now' className='w-fit mt-8' />
                     </div>
                 </div>
             </section>
@@ -138,7 +147,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section className='px-4 md:px-7 lg:px-14 py-20'>
+            <section id="contact-us" className='px-4 md:px-7 lg:px-14 py-20'>
                 <ContactForm />
             </section>
             <section className='px-4 md:px-7 lg:px-14 py-20'>
