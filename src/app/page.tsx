@@ -8,7 +8,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import Button from '@/components/Button/Button';
 import Link from 'next/link';
 import dynamic from "next/dynamic";
-import HomeBanner from '@/components/Banner';
+// import HomeBanner from '@/components/Banner';
 import StudentJourney from '@/components/StudentJourney';
 import ContactForm from '@/components/ContactForm';
 import ServiceCard from '@/components/ServiceCard';
