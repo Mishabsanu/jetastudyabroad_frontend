@@ -51,7 +51,7 @@ export default function Page() {
                             </div>
                         </div>
 
-                        {/* Blog 3 */}
+                        
                         <div className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
                             <div className="flex items-center">
                                 <img
