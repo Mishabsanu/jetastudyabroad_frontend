@@ -1,3 +1,4 @@
+'use client'
 import Button from '@/components/Button/Button';
 import ContactForm from '@/components/ContactForm'
 import Team from '@/components/Team';
