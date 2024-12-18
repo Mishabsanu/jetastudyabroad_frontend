@@ -57,7 +57,7 @@ export default function Footer() {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-5 md:gap-0'>
         <div>
           <Link href="/">
-            <Image src="/jeta-logo.svg" className="h-10 w-auto" alt="Logo" height={64} width={298} />
+            <Image src="/jeta-logo-blue.PNG" className="h-10 w-auto" alt="Logo" height={64} width={298} />
           </Link>
         </div>
         {

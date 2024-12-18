@@ -18,7 +18,7 @@ export default function Nav() {
             <div className="flex justify-between items-center">
                 <div className="text-2xl font-bold">
                     <Link href="/">
-                        <Image src="/jeta-logo.svg" className="h-10 w-auto" alt="Logo" height={64} width={298} />
+                        <Image src="/jeta-logo.PNG" className="h-6 md:h-12 w-auto" alt="Logo" height={100} width={400} />
                     </Link>
                 </div>
                 <ul className="hidden md:flex space-x-6 text-lg">

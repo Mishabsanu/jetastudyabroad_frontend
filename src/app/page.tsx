@@ -51,11 +51,27 @@ export default function Home() {
 
 
   const bannerData = [
-    '/banner1.jpg',
-    '/banner2.jpg',
-    '/banner3.jpg',
+    {
+      imageUrl: '/banner11.jpg',
+      heading: 'Welcome to Our First Banner',
+      buttonText: 'Learn More',
+    },
+    {
+      imageUrl: '/banner2.jpg',
+    },
+    {
+      imageUrl: '/banner3.jpg',
+    },
   ];
 
+  const handleScrollToContact = () => {
+    const element = document.getElementById("contact-us");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("Element with ID 'contact-us' not found");
+    }
+  };
 
   return (
     <>
@@ -75,17 +91,24 @@ export default function Home() {
           modules={[Pagination, Navigation]}
           className="relative"
         >
-          {bannerData.map((imageUrl, idx) => (
+          {bannerData.map((banner, idx) => (
             <SwiperSlide key={idx} className="relative">
-              {/* Single Image */}
+              {/* Banner Content */}
               <Image
-                src={imageUrl}
-                alt={`Slide ${idx + 1}`}
-                width={1200}
-                height={400}
-                priority
-                className='w-full h-96 md:h-[calc(100vh-120px)] object-fill'
+              src={banner.imageUrl}
+              alt={'banner'}
+              width={1200}
+              height={400}
+              priority
+              className='w-full h-56 md:h-[calc(100vh-120px)] object-fill'
               />
+                {(banner.heading && banner.buttonText) && (
+                <div className="absolute top-1/2 left-4 md:left-24 transform -translate-y-1/2 text-[#0f75bc]">
+                  <h1 className='font-black font-poppins text-3xl md:text-8xl leading-3 md:leading-[52px]'>USA intake </h1>
+                  <p className='text-xl mt-1 leading-4 md:text-5xl font-medium'>are open now</p>
+                  <Button onClick={handleScrollToContact} text='Get Your Free Consultation' className='w-fit text-xs md:text-base px-3 py-3 md:px-10 md:py-[10px] rounded-xl mt-6' />
+                </div>
+                )}
             </SwiperSlide>
           ))}
 
@@ -122,7 +145,7 @@ export default function Home() {
           Renowned for our unwavering integrity and excellence, JETA Study Abroad is one of the finest abroad education consultancies in Kerala. 
           With our exceptional connections in prestigious universities around the globe, we provide end-to-end support, guiding students to secure their place and build a fulfilling future on their dream campuses.
         </p>
-        <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-4'></div>
+        <div id='contact-us' className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-4'></div>
         <ContactForm />
       </section>
       <section className='py-20' style={{
@@ -160,7 +183,7 @@ export default function Home() {
       </section>
       <StudentJourney />
       <section className='px-4 md:px-7 lg:px-14 py-20'>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.map((card, index) => (
             <ServiceCard
               key={index}
