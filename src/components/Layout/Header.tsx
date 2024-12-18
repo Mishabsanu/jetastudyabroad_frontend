@@ -23,7 +23,7 @@ export default function Header() {
                     </Link>
                 </div>
 
-                {/* Email Section */}
+           
                 <div className="flex gap-2 justify-center items-center">
                     <Image
                         className="h-4 w-4 md:h-6 md:w-6 object-contain"
