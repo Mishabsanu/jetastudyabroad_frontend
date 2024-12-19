@@ -14,6 +14,9 @@ const StudentJourney = () => {
                 controls={false}
                 width="100%"
                 height="100%"
+                config={{
+                    file: { attributes: { preload: "auto" } },
+                }}
             />
         ),
         []

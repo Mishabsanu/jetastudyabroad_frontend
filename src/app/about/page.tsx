@@ -112,43 +112,42 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section className='bg-[#F1F1F1] px-4 md:px-7 lg:px-14 py-16'>
-                <h3 className='text-[#2B292A] font-poppins text-center mx-auto text-3xl font-semibold max-w-[522px]'>
+            <section className="bg-[#F1F1F1] px-4 md:px-7 lg:px-14 py-16">
+                <h3 className="text-[#2B292A] font-poppins text-center mx-auto text-3xl font-semibold max-w-[522px]">
                     Specialties of Jeta Study Abroad
-
                 </h3>
-                <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto my-4'></div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 max-w-[1100px] mx-auto'>
-                    <div>
-                        <h4 className='text-xl font-poppins font-semibold mb-1'>
+                <div className="bg-[#0f75bc] w-20 h-[3px] mx-auto my-4"></div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 max-w-[1100px] mx-auto">
+                    {/* Card 1 */}
+                    <div className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                        <h4 className="text-xl font-poppins font-semibold mb-2 text-[#0f75bc]">
                             Comprehensive Guidance
                         </h4>
-                        <p className='text-base font-roboto leading-6 font-normal'>
-                            We guide you through each step, from course
-                            selection to making friends in your new country.
+                        <p className="text-base font-roboto leading-6 text-gray-600">
+                            We guide you through each step, from course selection to making friends in your new country.
                         </p>
                     </div>
-                    <div>
-                        <h4 className='text-xl font-poppins font-semibold mb-1'>
+                    {/* Card 2 */}
+                    <div className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                        <h4 className="text-xl font-poppins font-semibold mb-2 text-[#0f75bc]">
                             Partner Programs
                         </h4>
-                        <p className='text-base font-roboto leading-6 font-normal'>
-                            Our unique programs—Jeta Uni, Jeta Dome, Jeta Fin, and
-                            Jeta Lab—offer specialized support for education, accommodation, finances,and social connections.
+                        <p className="text-base font-roboto leading-6 text-gray-600">
+                            Our unique programs—Jeta Uni, Jeta Dome, Jeta Fin, and Jeta Lab—offer specialized support for education, accommodation, finances, and social connections.
                         </p>
                     </div>
-                    <div>
-                        <h4 className='text-xl font-poppins font-semibold mb-1'>
+                    {/* Card 3 */}
+                    <div className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+                        <h4 className="text-xl font-poppins font-semibold mb-2 text-[#0f75bc]">
                             Student-Centric Approach
                         </h4>
-                        <p className='text-base font-roboto leading-6 font-normal'>
-                            Our services are tailored to meet students&apos; needs,
-                            offering free training, housing assistance, and access to community spaces to ensure you feel right at home.
+                        <p className="text-base font-roboto leading-6 text-gray-600">
+                            Our services are tailored to meet students&apos; needs, offering free training, housing assistance, and access to community spaces to ensure you feel right at home.
                         </p>
                     </div>
                 </div>
             </section>
-            <section id="contact-us" className='px-4 md:px-7 lg:px-14 py-20'>
+            <section id="contact-us" className='px-4 md:px-7 lg:px-14'>
                 <ContactForm />
             </section>
             <section className='px-4 md:px-7 lg:px-14 py-20'>
