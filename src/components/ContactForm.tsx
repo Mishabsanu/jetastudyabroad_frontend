@@ -48,10 +48,10 @@ export default function ContactForm() {
     };
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 max-w-[1290px] mt-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 max-w-[1290px] mt-10 rounded-2xl overflow-hidden'>
             <div>
                 <Image
-                    className='object-cover object-center h-full w-full'
+                    className='object-cover object-center h-full w-full max-h-[490px]'
                     src='/form-image.png'
                     alt='form'
                     width={645}
@@ -59,7 +59,7 @@ export default function ContactForm() {
                 />
             </div>
             <form
-                className='bg-[#E0E0E0]/[0.44] py-14 px-8 flex flex-col justify-center'
+                className='bg-[#E0E0E0]/[0.44] py-8 px-8 flex flex-col justify-center'
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className='space-y-5'>
@@ -158,28 +158,8 @@ export default function ContactForm() {
                             {errors.address && <p className="text-red-500">{errors.address.message}</p>}
                     </div>
                 </div>
-
-                {/* Consent Checkboxes */}
-                <p className='text-black font-roboto text-base mt-6'>
-                    Jeta will not share your details with others without your permission:
-                </p>
-                <div className='my-4 space-y-4'>
-                    <div className='flex items-center gap-3'>
-                        <input
-                            id="terms"
-                            type="checkbox"
-                            {...register("terms", { required: "You must agree to the terms" })}
-                            className="w-5 h-5 text-gray-500 border-2 rounded focus:ring-0 checked:bg-app-black checked:border-[#6C7275] cursor-pointer"
-                        />
-                        <p className='text-black/55 font-roboto text-sm'>
-                            I agree to GC Terms and Privacy Policy
-                        </p>
-                        {errors.terms && <p className="text-red-500">{errors.terms.message}</p>}
-                    </div>
-                </div>
-
                 {/* Submit Button */}
-                <Button text='BOOK YOUR SEAT' className='w-fit' type="submit" />
+                <Button text='BOOK YOUR SEAT' className='w-fit mt-8' type="submit" />
             </form>
         </div>
     );

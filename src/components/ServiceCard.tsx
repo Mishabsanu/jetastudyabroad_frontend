@@ -39,7 +39,7 @@ const ServiceCard: React.FC<SlideCardProps> = ({  description, image, color }) =
     };
 
     return (
-        <div>
+        <div className="shadow-2xl">
             <motion.div
                 onClick={handleClick}
                 onHoverStart={handleHover}
@@ -47,10 +47,10 @@ const ServiceCard: React.FC<SlideCardProps> = ({  description, image, color }) =
                 className="cursor-pointer"
             >
                 <div
-                    className={`relative bg-gradient-to-b ${color} -z-10`}
+                    className={`relative bg-gradient-to-b ${color} -z-10 rounded-xl`}
                     style={{
                         overflow: "hidden",
-                        height: "70vh",
+                        height: "300px",
                     }}
                 >
                     <motion.div

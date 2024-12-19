@@ -47,9 +47,7 @@ export default function InteractiveGlobe() {
         let to:any;
         (function check() {
             if (globeEl.current) {
-                // globeEl.current.controls().autoRotate = true;
-                // globeEl.current.controls().autoRotateSpeed = 0.7;
-                globeEl.current.pointOfView({ lat: 54.5260, lng: 15.2551, altitude: 0.9 });
+                globeEl.current.pointOfView({ lat: 54.5260, lng: 15.2551, altitude: 1.3 });
             } else {
                 to = setTimeout(check, 1000);
             }
@@ -66,7 +64,7 @@ export default function InteractiveGlobe() {
             <Globe
                 ref={globeEl}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+                backgroundColor="#ffff"
                 labelsData={countries}
                 labelLat={(d: any) => d.geometry.coordinates[1]}
                 labelLng={(d: any) => d.geometry.coordinates[0]}
