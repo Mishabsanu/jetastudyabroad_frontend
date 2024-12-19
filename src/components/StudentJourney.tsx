@@ -18,7 +18,7 @@ const StudentJourney = () => {
                     playing
                     loop
                     muted // Add this line to enable autoplay
-                    controls={true}
+                    controls={false}
                     width="100%"
                     height="100%"
                 />
