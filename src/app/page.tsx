@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Button from '@/components/Button/Button';
 import Link from 'next/link';
 import dynamic from "next/dynamic";
@@ -12,6 +12,7 @@ import dynamic from "next/dynamic";
 import StudentJourney from '@/components/StudentJourney';
 import ContactForm from '@/components/ContactForm';
 import ServiceCard from '@/components/ServiceCard';
+import AutoChangeText from '@/components/Banner';
 const InteractiveGlobe = dynamic(() => import('@/components/IntractiveGlobe/IntractiveGlobe'), {
   ssr: false,
 });
@@ -52,12 +53,12 @@ export default function Home() {
 
   const bannerData = [
     {
+      imageUrl: '/banner2.jpg',
+    },
+    {
       imageUrl: '/banner11.jpg',
       heading: 'Welcome to Our First Banner',
       buttonText: 'Learn More',
-    },
-    {
-      imageUrl: '/banner2.jpg',
     },
     {
       imageUrl: '/banner3.jpg',
@@ -88,7 +89,11 @@ export default function Home() {
             prevEl: '.image-swiper-button-prev',
             disabledClass: 'swiper-button-disabled',
           }}
-          modules={[Pagination, Navigation]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Pagination, Navigation, Autoplay]}
           className="relative"
         >
           {bannerData.map((banner, idx) => (
@@ -100,7 +105,7 @@ export default function Home() {
               width={1200}
               height={400}
               priority
-              className='w-full h-56 md:h-[calc(100vh-120px)] object-fill'
+              className='w-full h-56 md:h-[calc(100vh-50px)] mx-auto object-cover'
               />
                 {(banner.heading && banner.buttonText) && (
                 <div className="absolute top-1/2 left-4 md:left-24 transform -translate-y-1/2 text-[#0f75bc]">
@@ -140,7 +145,8 @@ export default function Home() {
       </section>
       {/* <HomeBanner /> */}
       <section className='px-4 md:px-7 lg:px-14 py-20'>
-        <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3>
+        <AutoChangeText />
+        {/* <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3> */}
         <p className='text-[#2B292A] text-lg font-roboto text-center max-w-[838px] mx-auto'>
           Renowned for our unwavering integrity and excellence, JETA Study Abroad is one of the finest abroad education consultancies in Kerala. 
           With our exceptional connections in prestigious universities around the globe, we provide end-to-end support, guiding students to secure their place and build a fulfilling future on their dream campuses.
@@ -148,7 +154,7 @@ export default function Home() {
         <div id='contact-us' className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-4'></div>
         <ContactForm />
       </section>
-      <section className='py-20' style={{
+      {/* <section className='py-20' style={{
         background: 'url(/virtual-office-bg.png) lightgray 50% / cover no-repeat',
       }}>
         <form className='px-4 md:px-7 lg:px-14'>
@@ -174,7 +180,7 @@ export default function Home() {
             <Button text='JOIN VIRTUAL OFFICE NOW' className='w-fit' />
           </div>
         </form>
-      </section>
+      </section> */}
       <section className="py-20 px-4 md:px-7 lg:px-14 text-center">
         <InteractiveGlobe />
         <h4 className="text-xl md:text-2xl font-poppins font-semibold text-gray-800 mt-6">
@@ -183,7 +189,11 @@ export default function Home() {
       </section>
       <StudentJourney />
       <section className='px-4 md:px-7 lg:px-14 py-20'>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <h4 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mt-6">
+          Features
+        </h4>
+        <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mb-8'></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1020px] mx-auto">
           {cards.map((card, index) => (
             <ServiceCard
               key={index}

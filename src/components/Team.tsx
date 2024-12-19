@@ -1,6 +1,10 @@
 'use client';
 import React, { FC } from 'react';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 interface TeamMember {
     image: string;
@@ -28,17 +32,27 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                     </div>
                 </div>
 
-                {/* Team Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Swiper Carousel */}
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    navigation
+                    breakpoints={{
+                        640: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 30 },
+                    }}
+                    modules={[Navigation]}
+                    className="team-swiper"
+                >
                     {teamMembers.map((member, idx) => (
-                        <div key={idx} className="bg-white shadow-xl rounded-2xl p-4">
-                            <div>
+                        <SwiperSlide key={idx} className='py-5'>
+                            <div className="bg-white shadow-lg rounded-2xl">
                                 <Image
                                     src={member.image}
                                     alt={member.name}
                                     width={300}
                                     height={300}
-                                    className="w-full rounded-t-2xl h-[210px] object-cover object-top"
+                                    className="w-full rounded-t-2xl h-[220px] md:h-[350px] object-cover object-top"
                                 />
                                 <div className="p-3 text-center">
                                     <h5 className="text-xl mb-1 font-bold">
@@ -47,9 +61,9 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                                     <p className="text-sm text-gray-500">{member.role}</p>
                                 </div>
                             </div>
-                        </div>
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
             </div>
         </section>
     );
