@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 interface TeamMember {
     image: string;
@@ -24,7 +24,7 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                 <div className="flex justify-center text-center mb-12">
                     <div className="sm:max-w-lg">
                         <h3 className="text-3xl leading-none md:text-[45px] font-bold">
-                            Our Team Members
+                            Core Team
                         </h3>
                         <p className="font-medium opacity-60 mt-4">
                             Meet the creative and talented people who make our company shine!
@@ -41,7 +41,7 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                         640: { slidesPerView: 2, spaceBetween: 20 },
                         1024: { slidesPerView: 3, spaceBetween: 30 },
                     }}
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     className="team-swiper"
                 >
                     {teamMembers.map((member, idx) => (

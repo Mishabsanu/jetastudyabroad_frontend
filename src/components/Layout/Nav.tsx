@@ -9,6 +9,7 @@ export default function Nav() {
         { name: 'Home', url: '/' },
         { name: 'About', url: '/about' },
         { name: 'Blogs', url: '/blogs' },
+        { name: 'Contact Us', url: '/contact' },
     ];
 
     const [open, setOpen] = useState(false);
