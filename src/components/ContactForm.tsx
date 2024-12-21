@@ -48,7 +48,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 max-w-[1290px] mt-10 rounded-2xl overflow-hidden'>
+        <div className='grid grid-cols-1 md:grid-cols-2 max-w-[1290px] mx-auto mt-10 rounded-2xl overflow-hidden'>
             <div>
                 <Image
                     className='object-cover object-center h-full w-full max-h-[490px]'

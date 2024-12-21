@@ -60,7 +60,7 @@ export default function InteractiveGlobe() {
     }, []);
 
     return (
-        <div className="relative" ref={globeContainerRef}>
+        <div className="relative md:max-w-3xl mx-auto" ref={globeContainerRef}>
             <Globe
                 ref={globeEl}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
