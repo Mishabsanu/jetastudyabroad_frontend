@@ -1,5 +1,4 @@
-'use client';
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,6 +16,14 @@ interface TeamProps {
 }
 
 const Team: FC<TeamProps> = ({ teamMembers }) => {
+    const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+    useEffect(() => {
+        if (swiperInstance) {
+            swiperInstance.update(); // Ensure Swiper recalculates the layout
+        }
+    }, [swiperInstance]);
+
     return (
         <section className="py-14 md:py-24 bg-white text-zinc-900">
             <div className="container px-4 mx-auto">
@@ -41,11 +48,17 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                         640: { slidesPerView: 2, spaceBetween: 20 },
                         1024: { slidesPerView: 3, spaceBetween: 30 },
                     }}
+                    autoplay={{
+                        delay: 1500,
+                        disableOnInteraction: false,
+                    }}
+                    loop
+                    onSwiper={setSwiperInstance}
                     modules={[Navigation, Autoplay]}
                     className="team-swiper"
                 >
                     {teamMembers.map((member, idx) => (
-                        <SwiperSlide key={idx} className='py-5'>
+                        <SwiperSlide key={idx} className="py-5">
                             <div className="bg-white shadow-lg rounded-2xl">
                                 <Image
                                     src={member.image}
@@ -55,9 +68,7 @@ const Team: FC<TeamProps> = ({ teamMembers }) => {
                                     className="w-full rounded-t-2xl h-[220px] md:h-[350px] object-cover object-top"
                                 />
                                 <div className="p-3 text-center">
-                                    <h5 className="text-xl mb-1 font-bold">
-                                        {member.name}
-                                    </h5>
+                                    <h5 className="text-xl mb-1 font-bold">{member.name}</h5>
                                     <p className="text-sm text-gray-500">{member.role}</p>
                                 </div>
                             </div>

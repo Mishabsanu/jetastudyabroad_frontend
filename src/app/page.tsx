@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 import StudentJourney from '@/components/StudentJourney';
 import ContactForm from '@/components/ContactForm';
 import ServiceCard from '@/components/ServiceCard';
-import AutoChangeText from '@/components/Banner';
+// import AutoChangeText from '@/components/Banner';
 const InteractiveGlobe = dynamic(() => import('@/components/IntractiveGlobe/IntractiveGlobe'), {
   ssr: false,
 });

@@ -112,7 +112,7 @@ export default function InteractiveGlobe() {
                 }}
                 labelSize={1}
                 labelDotRadius={0.5}
-                labelColor={() => "#0f75bc"}
+                labelColor={() => "#FFFF"}
                 labelAltitude={0}
                 width={width}
                 height={600}
