@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -24,29 +24,31 @@ const AutoChangeText = () => {
     }, [rotatingPoints.length]);
 
     return (
+        <section className="relative bg-[#0f75bc] text-white py-16 md:py-20 px-4 md:px-7">
+            {/* Content */}
+            <div className="relative z-10 max-w-[760px] mx-auto text-center">
+                {/* Main Title */}
+                <h1 className="text-3xl md:text-5xl font-poppins font-bold mb-6">
+                    Your Destination with <span className="font-extrabold font-roboto text-[#ffeb3b]">JETA</span>
+                </h1>
 
-        < div className="relative z-10 text-black px-4 max-w-[760px] mx-auto text-center" >
-            {/* Main Title */}
-            < h1 className="text-2xl md:text-4xl font-poppins font-bold mb-4" >
-                Your Destination with <span className="font-extrabold font-roboto">JETA</span>
-            </h1 >
-
-            {/* Rotating Points */}
-            < div className="h-10 overflow-hidden" >
-                <AnimatePresence mode="wait">
-                    <motion.p
-                        key={currentIndex}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-base md:text-xl font-bold text-[#0f75bc]"
-                    >
-                        {rotatingPoints[currentIndex]}
-                    </motion.p>
-                </AnimatePresence>
-            </div >
-        </div >
+                {/* Rotating Points */}
+                <div className="h-12 overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.p
+                            key={currentIndex}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-lg md:text-2xl font-semibold"
+                        >
+                            {rotatingPoints[currentIndex]}
+                        </motion.p>
+                    </AnimatePresence>
+                </div>
+            </div>
+        </section>
     );
 };
 

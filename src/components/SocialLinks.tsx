@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SocialLinks() {
     return (
-        <div className="fixed top-1/2 right-0 transform -translate-y-1/2">
+        <div className="fixed top-1/2 right-0 transform -translate-y-1/2 z-[9999]">
             <div className="flex flex-col items-center space-y-1 p-2 rounded-l-lg">
                 {/* Instagram Link */}
                 <Link

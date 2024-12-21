@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 import StudentJourney from '@/components/StudentJourney';
 import ContactForm from '@/components/ContactForm';
 import ServiceCard from '@/components/ServiceCard';
-// import AutoChangeText from '@/components/Banner';
+import AutoChangeText from '@/components/Banner';
 const InteractiveGlobe = dynamic(() => import('@/components/IntractiveGlobe/IntractiveGlobe'), {
   ssr: false,
 });
@@ -143,6 +143,7 @@ export default function Home() {
           </div>
         </Swiper>
       </section>
+      <AutoChangeText />
       {/* <HomeBanner /> */}
       <section className='px-4 md:px-7 lg:px-14 py-20'>
         <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3>
@@ -182,9 +183,13 @@ export default function Home() {
       </section> */}
       <section className="py-20 px-4 md:px-7 lg:px-14 text-center">
         <InteractiveGlobe />
-        <h4 className="text-xl md:text-2xl font-poppins font-semibold text-gray-800 mt-6">
-          No Borders, Just Dreams - <span className="text-blue-500">Study Anywhere with Us</span>
+        <h4 className="relative text-xl md:text-2xl font-poppins font-semibold text-gray-800 mt-6 text-center">
+          No Borders, Just Dreams -
+          <span className="text-blue-500 underline decoration-dotted decoration-2 underline-offset-4">
+            Study Anywhere with Us
+          </span>
         </h4>
+
       </section>
       <StudentJourney />
       <section className='px-4 md:px-7 lg:px-14 py-20'>
