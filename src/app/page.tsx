@@ -145,8 +145,7 @@ export default function Home() {
       </section>
       {/* <HomeBanner /> */}
       <section className='px-4 md:px-7 lg:px-14 py-20'>
-        <AutoChangeText />
-        {/* <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3> */}
+        <h3 className='font-poppins text-3xl/9 font-bold text-center mb-2 max-w-[638px] mx-auto'>JETA: Your Trusted Partner in Global Education Network</h3>
         <p className='text-[#2B292A] text-lg font-roboto text-center max-w-[838px] mx-auto'>
           Renowned for our unwavering integrity and excellence, JETA Study Abroad is one of the finest abroad education consultancies in Kerala. 
           With our exceptional connections in prestigious universities around the globe, we provide end-to-end support, guiding students to secure their place and build a fulfilling future on their dream campuses.
