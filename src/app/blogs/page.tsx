@@ -1,12 +1,30 @@
+import MotionContainer from "@/components/MotionContainer/MotionContainer";
+import MotionItem from "@/components/MotionItem/MotionItem";
+
+
+
 export default function Page() {
+
     return (
         <>
+            {/* Banner Section */}
+            <section style={{
+                background: 'url(/about-bg.png) lightgray 50% / cover no-repeat',
+            }} className='px-4 md:px-7 lg:px-14 py-28'>
+                <div>
+                    <h1 className='font-poppins text-3xl font-semibold max-w-[499px] mb-3'>Blogs</h1>
+                </div>
+            </section>
+
+            {/* Blog Section */}
             <section className="py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">Our Latest Blog</h2>
-                    <div className="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+
+                    {/* Motion Container for Blog Post Animation */}
+                    <MotionContainer classNames="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
                         {/* Blog 1 */}
-                        <div className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                        <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
                                     src="https://pagedone.io/asset/uploads/1696244317.png"
@@ -26,10 +44,10 @@ export default function Page() {
                                     Read more..
                                 </a>
                             </div>
-                        </div>
+                        </MotionItem>
 
                         {/* Blog 2 */}
-                        <div className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                        <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
                                     src="https://pagedone.io/asset/uploads/1696244340.png"
@@ -49,10 +67,10 @@ export default function Page() {
                                     Read more..
                                 </a>
                             </div>
-                        </div>
+                        </MotionItem>
 
-                        
-                        <div className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                        {/* Blog 3 */}
+                        <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
                                     src="https://pagedone.io/asset/uploads/1696244356.png"
@@ -72,8 +90,8 @@ export default function Page() {
                                     Read more..
                                 </a>
                             </div>
-                        </div>
-                    </div>
+                        </MotionItem>
+                    </MotionContainer>
                 </div>
             </section>
         </>

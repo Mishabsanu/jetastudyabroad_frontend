@@ -10,9 +10,10 @@ import Link from 'next/link';
 import dynamic from "next/dynamic";
 // import HomeBanner from '@/components/Banner';
 import StudentJourney from '@/components/StudentJourney';
-import ContactForm from '@/components/ContactForm';
+// import ContactForm from '@/components/ContactForm';
 import ServiceCard from '@/components/ServiceCard';
 import AutoChangeText from '@/components/Banner';
+import ConsultingForm from '@/components/CunsoltingForm';
 const InteractiveGlobe = dynamic(() => import('@/components/IntractiveGlobe/IntractiveGlobe'), {
   ssr: false,
 });
@@ -53,6 +54,9 @@ export default function Home() {
 
   const bannerData = [
     {
+      imageUrl: '/banner3.jpg',
+    },
+    {
       imageUrl: '/banner2.jpg',
     },
     {
@@ -60,9 +64,7 @@ export default function Home() {
       heading: 'Welcome to Our First Banner',
       buttonText: 'Learn More',
     },
-    {
-      imageUrl: '/banner3.jpg',
-    },
+
   ];
 
   const handleScrollToContact = () => {
@@ -152,7 +154,8 @@ export default function Home() {
           With our exceptional connections in prestigious universities around the globe, we provide end-to-end support, guiding students to secure their place and build a fulfilling future on their dream campuses.
         </p>
         <div id='contact-us' className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-4'></div>
-        <ContactForm />
+        {/* <ContactForm /> */}
+        <ConsultingForm/>
       </section>
       {/* <section className='py-20' style={{
         background: 'url(/virtual-office-bg.png) lightgray 50% / cover no-repeat',
@@ -181,7 +184,7 @@ export default function Home() {
           </div>
         </form>
       </section> */}
-      <section className="py-20 px-4 md:px-7 lg:px-14 text-center">
+      <section className="pt-5 pb-10 px-4 md:px-7 lg:px-14 text-center">
         <InteractiveGlobe />
         <h4 className="relative text-xl md:text-2xl font-poppins font-semibold text-gray-800 mt-6 text-center">
           No Borders, Just Dreams -

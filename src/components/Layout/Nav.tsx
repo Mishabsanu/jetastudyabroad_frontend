@@ -19,7 +19,7 @@ export default function Nav() {
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
         } else {
-            console.error("Element with ID 'contact-us' not found");
+            window.location.href = "/#contact-us";
         }
     };
 

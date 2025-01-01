@@ -27,11 +27,13 @@ export default function InteractiveGlobe() {
     const globeEl = useRef<any>(null);
 
     const [width, setWidth] = useState(0);
+    const [height, setHeight] = useState(600);
 
     useEffect(() => {
         if (globeContainerRef.current) {
-            const { offsetWidth } = globeContainerRef.current;
+            const { offsetWidth, offsetHeight } = globeContainerRef.current;
             setWidth(offsetWidth);
+            setHeight(offsetHeight);
         }
     }, []);
 
@@ -47,7 +49,7 @@ export default function InteractiveGlobe() {
         let to:any;
         (function check() {
             if (globeEl.current) {
-                globeEl.current.pointOfView({ lat: 54.5260, lng: 15.2551, altitude: 1.3 });
+                globeEl.current.pointOfView({ lat: 54.5260, lng: 15.2551, });
             } else {
                 to = setTimeout(check, 1000);
             }
@@ -115,7 +117,7 @@ export default function InteractiveGlobe() {
                 labelColor={() => "#FFFF"}
                 labelAltitude={0}
                 width={width}
-                height={600}
+                height={height}
 
             // onLabelClick={(d: any) => alert(`${d.properties.name}: ${d.properties.info}`)}
             />

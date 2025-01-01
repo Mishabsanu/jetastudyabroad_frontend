@@ -3,78 +3,57 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
-  const footerLinks = [
-    {
-      title: {
-        text: "Study Abroad",
-        url: "/"
-      },
-      items: [
-        { text: 'How to choose your destination', url: '/choose-your-destination' },
-        { text: 'Study abroad intakes', url: '/study-abroad-intakes' },
-        { text: 'Guide for parents', url: '/guide-for-parents' },
-        { text: 'THE World University Rankings', url: '/the-world-university-rankings' },
-        { text: 'QS World University Rankings', url: '/qs-world-university-rankings' },
-        { text: 'GC Events', url: '/gc-events' },
-        { text: 'Institution answers', url: '/institution-answers' },
-        { text: 'Student Essentials', url: '/student-essentials' }
-      ]
-    },
-    {
-      title: {
-        text: "Useful Links",
-        url: ""
-      },
-      items: [
-        { text: 'Jeta Blog', url: '/jeta-blog' },
-        { text: 'Engineering courses', url: '/engineering-courses' },
-        { text: 'Health and medicine', url: '/health-and-medicine' },
-        { text: 'Information technology', url: '/information-technology' },
-        { text: 'Management courses', url: '/management-courses' },
-        { text: 'Find Scholarships', url: '/find-scholarships' },
-        { text: 'Student Reviews', url: '/student-reviews' },
-        { text: 'Ask GC', url: '/ask-gc' }
-      ]
-    },
-    {
-      title: {
-        text: "IELTS",
-        url: ""
-      },
-      items: [
-        { text: 'What is IELTS?', url: '/what-is-ielts' },
-        { text: 'Prepare for IELTS', url: '/prepare-for-ielts' },
-        { text: 'Computer-delivered IELTS', url: '/computer-delivered-ielts' },
-        { text: 'Book my IELTS test', url: '/book-ielts-test' },
-        { text: 'IELTS for UKVI', url: '/ielts-for-ukvi' },
-        { text: 'IELTS test dates', url: '/ielts-test-dates' },
-        { text: 'About GC IELTS', url: '/about-gc-ielts' }
-      ]
-    }
-  ]
   return (
     <footer className='bg-[#2B292A] py-20 px-4 md:px-7 lg:px-14'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-5 md:gap-0'>
+        {/* Address and Phone Number */}
         <div>
-          <Link href="/">
-            <Image src="/jeta-logo-blue.PNG" className="h-10 w-auto" alt="Logo" height={64} width={298} />
-          </Link>
+          <h4 className="text-white text-xl font-poppins mb-4">Address</h4>
+          <p className="text-white text-sm">The Workbook, Ground floor, HiLITE Business Park, Poovangal, Kozhikode, Calicut, India 673014</p>
+          <p className="text-white text-sm">Phone: <a href="tel:+916282118447" className="text-indigo-500">+91 6282 118 447</a></p>
         </div>
-        {
-          footerLinks.map((link, idx) => (
-            <div key={idx}>
-              <h4 className='text-xl font-poppins text-white font-medium mb-5'>{link.title.text}</h4>
-              <div className='space-y-4'>
-                {
-                  link.items.map((item, idx) => (
-                    <Link className='text-white inline-flex font-rubic text-sm' key={idx} href={item.url}>{item.text}</Link>
-                  ))
-                }
-              </div>
-            </div>
-          ))
-        }
+
+        {/* Social Media Icons */}
+        <div>
+          <h4 className="text-white text-xl font-poppins mb-4">Follow Us</h4>
+          <div className='flex space-x-4'>
+            <Link href="https://wa.me/+916282118447" target="_blank" rel="noopener noreferrer">
+              <Image src="/WhatsApp.webp" alt="WhatsApp" width={42} height={42} className="hover:opacity-80 h-8 w-8" />
+            </Link>
+            <Link href="https://www.instagram.com/jeta_studyabroad" target="_blank" rel="noopener noreferrer">
+              <Image src="/insta.png" alt="Instagram" width={42} height={42} className="hover:opacity-80 h-8 w-8" />
+            </Link>
+            <Link href="https://www.linkedin.com/company/jeta-study-abroad/" target="_blank" rel="noopener noreferrer">
+              <Image src="/linkedin.png" alt="LinkedIn" width={42} height={42} className="hover:opacity-80 h-8 w-8" />
+            </Link>
+            <Link href="https://www.youtube.com/@jetastudyabroad" target="_blank" rel="noopener noreferrer">
+              <Image src="/youtube.png" alt="YouTube" width={42} height={42} className="hover:opacity-80 h-8 w-8" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Email Information */}
+        <div>
+          <h4 className="text-white text-xl font-poppins mb-4">Mail ID</h4>
+          <p className="text-white text-sm">For enquiries: <a href="mailto:jetastudyabroad@gmail.com" className="text-indigo-500">jetastudyabroad@gmail.com</a></p>
+          <p className="text-white text-sm">For loans: <a href="mailto:loans.jetafin@gmail.com" className="text-indigo-500">loans.jetafin@gmail.com</a></p>
+        </div>
+
+        {/* Study Abroad in Countries */}
+        <div>
+          <h4 className="text-white text-xl font-poppins mb-4">Study Abroad in</h4>
+          <ul className="space-y-4">
+            <li><Link className='text-white text-sm' href='/study-in-uk'>Study in UK</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-canada'>Study in Canada</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-australia'>Study in Australia</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-austria'>Study in Austria</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-newzealand'>Study in New Zealand</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-ireland'>Study in Ireland</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-usa'>Study in USA</Link></li>
+            <li><Link className='text-white text-sm' href='/study-in-europe'>Study in European countries</Link></li>
+          </ul>
+        </div>
       </div>
     </footer>
-  )
+  );
 }

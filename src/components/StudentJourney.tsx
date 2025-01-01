@@ -6,7 +6,7 @@ const StudentJourney = () => {
                 Student Journey
             </h2>
             <video
-                className="w-auto h-auto max-w-[500px] max-h-[400px] object-contain object-center mx-auto pointer-events-none"
+                className="w-auto h-auto object-cover object-center"
                 loop
                 autoPlay
                 muted

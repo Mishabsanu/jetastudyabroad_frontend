@@ -1,6 +1,7 @@
 'use client'
 import Button from '@/components/Button/Button';
-import ContactForm from '@/components/ContactForm'
+import ConsultingForm from '@/components/CunsoltingForm';
+// import ContactForm from '@/components/ContactForm'
 import Team from '@/components/Team';
 import Image from 'next/image'
 import React from 'react'
@@ -148,7 +149,8 @@ export default function About() {
                 </div>
             </section>
             <section id="contact-us" className='px-4 md:px-7 lg:px-14'>
-                <ContactForm />
+                {/* <ContactForm /> */}
+                <ConsultingForm />
             </section>
             <section className='px-4 md:px-7 lg:px-14 py-20'>
                 <Team teamMembers={teamMembers} />

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 interface SlideCardProps {
     description: string;
@@ -7,88 +6,30 @@ interface SlideCardProps {
     color: string;
 }
 
-const ServiceCard: React.FC<SlideCardProps> = ({  description, image, color }) => {
-    const controls = useAnimation();
-    const slideText = useAnimation();
-    const [clicked, setClicked] = useState(false);
-
-    const handleHover = () => {
-        controls.start({
-            y: "100%",
-            x: "50%",
-            scale: 2.2,
-            filter: "blur(8px)",
-            opacity: 0,
-        });
-        slideText.start({ x: 0, opacity: 1 });
-    };
-
-    const handleLeave = () => {
-        controls.start({ y: 0, x: 0, scale: 1.1, filter: "blur(0)", opacity: 1 });
-        slideText.start({ x: 100, opacity: 0 });
-    };
-
-    const handleClick = () => {
-        if (clicked) {
-            handleLeave();
-            setClicked(false);
-        } else {
-            handleHover();
-            setClicked(true);
-        }
-    };
+const ServiceCard: React.FC<SlideCardProps> = ({  description, image }) => {
 
     return (
-        <div className="shadow-2xl">
-            <motion.div
-                onClick={handleClick}
-                onHoverStart={handleHover}
-                onHoverEnd={handleLeave}
-                className="cursor-pointer"
-            >
-                <div
-                    className={`relative bg-gradient-to-b ${color} -z-10 rounded-xl`}
-                    style={{
-                        overflow: "hidden",
-                        height: "300px",
-                    }}
-                >
-                    <motion.div
-                        initial={{ y: 0 }}
-                        animate={controls}
-                        transition={{ duration: 0.5 }}
-                        style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            backgroundImage: `url(${image})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                        }}
-                    />
-                    <div>
-                        <motion.div
-                            style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "100%",
-                                padding: "20px",
-                            }}
-                        >
-                            <motion.p
-                                initial={{ x: 300, opacity: 0 }}
-                                animate={slideText}
-                                transition={{ duration: 0.5 }}
-                                className="p-3 text-white font-poppins text-sm md:text-base"
-                            >
-                                {description}
-                            </motion.p>
-                        </motion.div>
+        <div className="group h-96 w-full [perspective:1000px]">
+            <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front Face */}
+                <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+                        <Image
+                            className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
+                            src={image}
+                            alt={'service'}
+                            width={320}
+                            height={320}
+                        />
+                </div>
+                {/* Back Face */}
+                <div className="absolute inset-0 h-full w-full rounded-xl bg-[#0f75bc] px-4 md:px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className="flex min-h-full flex-col items-center justify-center">
+                        <p className="text-sm md:text-lg text-pretty text-center">
+                            {description}
+                        </p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 };
