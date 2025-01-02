@@ -1,19 +1,21 @@
 const StudentJourney = () => {
     return (
-        <section className="relative px-4 md:px-7 lg:px-14 text-center">
+        <section className="relative py-10 md:py-20 px-4 md:px-7 lg:px-14 text-center bg-[#0f75bc]">
             {/* Background Video */}
-            <h2 className="text-3xl md:text-4xl font-bold text-black">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Student Journey
             </h2>
-            <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mt-1 mb-6'></div>
-            <video
-                className="w-auto h-auto max-h-[calc(100vh-200px)] mx-auto object-cover object-center"
-                loop
-                autoPlay
-                muted
-            >
-                <source src="/student-journey.mp4" type="video/mp4" />
-            </video>
+            <div className='bg-[#FFFF] w-20 h-[3px] mx-auto mt-1 mb-6'></div>
+            <div className="relative overflow-hidden">
+                <video
+                    className="w-auto h-auto max-h-[calc(100vh-200px)] mx-auto object-cover object-center rounded-md shadow-xl"
+                    loop
+                    autoPlay
+                    muted
+                >
+                    <source src="/student-journey.mp4" type="video/mp4" />
+                </video>
+            </div>
         </section>
     );
 };

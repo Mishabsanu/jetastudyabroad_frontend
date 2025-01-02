@@ -9,8 +9,8 @@ export default function Page() {
         <>
             {/* Banner Section */}
             <section style={{
-                background: 'url(/about-bg.png) lightgray 50% / cover no-repeat',
-            }} className='px-4 md:px-7 lg:px-14 py-28'>
+                background: 'url(/blogs-bg.png) lightgray 50% / cover no-repeat',
+            }} className='px-4 md:px-7 lg:px-14 py-5 md:py-28'>
                 <div>
                     <h1 className='font-poppins text-3xl font-semibold max-w-[499px] mb-3'>Blogs</h1>
                 </div>

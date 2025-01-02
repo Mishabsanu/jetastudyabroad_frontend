@@ -104,8 +104,8 @@ export default function Home() {
               <Image
               src={banner.imageUrl}
               alt={'banner'}
-              width={1200}
-              height={400}
+              width={1920}
+              height={601}
               priority
               className='w-full h-56 md:h-[calc(100vh-120px)] mx-auto object-cover'
               />

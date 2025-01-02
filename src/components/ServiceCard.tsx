@@ -24,7 +24,7 @@ const ServiceCard: React.FC<SlideCardProps> = ({  description, image }) => {
                 {/* Back Face */}
                 <div className="absolute inset-0 h-full w-full rounded-xl bg-[#0f75bc] px-4 md:px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                     <div className="flex min-h-full flex-col items-center justify-center">
-                        <p className="text-sm md:text-lg text-pretty text-center">
+                        <p className="text-sm md:text-lg font-medium text-pretty text-center">
                             {description}
                         </p>
                     </div>

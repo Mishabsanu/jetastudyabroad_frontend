@@ -58,10 +58,10 @@ export default function About() {
         <>
             <section style={{
                 background: 'url(/about-bg.png) lightgray 50% / cover no-repeat',
-            }} className='px-4 md:px-7 lg:px-14 py-28'>
+            }} className='px-4 md:px-7 lg:px-14 py-5 md:py-28'>
                 <div>
-                    <h1 className='font-poppins text-3xl font-semibold max-w-[499px] mb-3'>Why Jeta Study Abroad</h1>
-                    <p className='text-lg font-roboto font-normal max-w-[461px]'>
+                    <h1 className='font-poppins text-2xl md:text-3xl font-semibold max-w-[499px] mb-3'>Why Jeta Study Abroad</h1>
+                    <p className='text-base md:text-lg font-roboto font-normal max-w-[461px]'>
                         At Jeta Study Abroad, we’re more than just a guide for your academic
                         journey—we’re here to support you in building a fulfilling life in a new country.
                     </p>
