@@ -15,11 +15,11 @@ export default function Header() {
                         alt="Phone Icon"
                     />
                     <Link
-                        href="tel:1234567890"
+                        href="tel:+91 6282 118 447"
                         className="font-roboto text-xs md:text-sm text-white hover:underline"
-                        aria-label="Call us at 1234567890"
+                        aria-label="Call us at +91 6282 118 447"
                     >
-                        1234567890
+                        +91 6282 118 447
                     </Link>
                 </div>
 
@@ -33,11 +33,11 @@ export default function Header() {
                         alt="Email Icon"
                     />
                     <Link
-                        href="mailto:contact@example.com"
+                        href="mailto:jetastudyabroad@gmail.com"
                         className="font-roboto text-xs md:text-sm text-white hover:underline"
-                        aria-label="Contact us via email"
+                        aria-label="Contact us via email jetastudyabroad@gmail.com"
                     >
-                        contact@example.com
+                        jetastudyabroad@gmail.com
                     </Link>
                 </div>
             </div>

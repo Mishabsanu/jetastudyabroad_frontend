@@ -10,16 +10,21 @@ export default function Page() {
             {/* Banner Section */}
             <section style={{
                 background: 'url(/blogs-bg.png) lightgray 50% / cover no-repeat',
-            }} className='px-4 md:px-7 lg:px-14 py-5 md:py-28'>
+            }} className='px-4 md:px-7 lg:px-14 py-5 md:py-24'>
                 <div>
                     <h1 className='font-poppins text-3xl font-semibold max-w-[499px] mb-3'>Blogs</h1>
+                    <p className='text-base md:text-lg font-roboto font-normal max-w-[599px]'>
+                        Discover valuable insights, tips, and updates on studying abroad. From navigating academic choices to adapting to a new culture, our blogs provide expert advice and inspiring stories to help you make the most of your journey with Jeta Study Abroad.
+                    </p>
                 </div>
             </section>
 
             {/* Blog Section */}
             <section className="py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">Our Latest Blog</h2>
+                    <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center">Our Latest Blog</h2>
+                    <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mb-16'></div>
+
 
                     {/* Motion Container for Blog Post Animation */}
                     <MotionContainer classNames="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
