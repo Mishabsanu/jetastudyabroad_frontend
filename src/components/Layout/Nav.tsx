@@ -47,7 +47,7 @@ export default function Nav() {
                             {link.url === "#contact" ? (
                                 <button
                                     onClick={handleScrollToContact}
-                                    className={`font-poppins ${pathname === "/#contact"
+                                    className={`font-poppins capitalize ${pathname === "/#contact"
                                             ? "text-blue-500 font-semibold"
                                             : "hover:text-blue-500"
                                         }`}
