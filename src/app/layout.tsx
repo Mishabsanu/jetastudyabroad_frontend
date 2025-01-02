@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${roboto.variable} relative`}
+        className={`${poppins.variable} ${roboto.variable} relative font-poppins`}
       >
         <Layout>
           {children}

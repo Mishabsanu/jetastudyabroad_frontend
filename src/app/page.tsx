@@ -107,7 +107,7 @@ export default function Home() {
               width={1200}
               height={400}
               priority
-              className='w-full h-56 md:h-[calc(100vh-50px)] mx-auto object-cover'
+              className='w-full h-56 md:h-[calc(100vh-120px)] mx-auto object-cover'
               />
                 {(banner.heading && banner.buttonText) && (
                 <div className="absolute top-1/2 left-4 md:left-24 transform -translate-y-1/2 text-[#0f75bc]">
