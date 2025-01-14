@@ -14,6 +14,7 @@ import StudentJourney from '@/components/StudentJourney';
 import ServiceCard from '@/components/ServiceCard';
 import AutoChangeText from '@/components/Banner';
 import ConsultingForm from '@/components/CunsoltingForm';
+import FAQs from '@/components/Faq';
 const InteractiveGlobe = dynamic(() => import('@/components/IntractiveGlobe/IntractiveGlobe'), {
   ssr: false,
 });
@@ -22,10 +23,10 @@ export default function Home() {
 
   const cards = [
     {
-      title: "JETA Uni",
+      title: "JETA Fin",
       description:
-        "Many students face challenges finding part-time jobs or reliable earning opportunities while studying abroad. That’s why JETA Uni offers a free forex trading course, covering everything from basic to advanced strategies. Our program equips students with valuable income-generating skills, providing a sustainable alternative to traditional part-time jobs and paving the way for financial independence.",
-      image: "/jeta-uni.jpg",
+        "We make achieving academic dreams easier for you with this plan. This service provides student loans that cover up to 99% of your tuition and living expenses, all without requiring collateral. Our loan structure is designed to reduce financial stress, allowing students to focus entirely on their studies and personal growth instead of worrying about expenses.",
+      image: "/jeta-fin.jpg",
       color: "from-[#0f75bc] via-[#084f79] to-[#032841]",
     },
     {
@@ -36,17 +37,17 @@ export default function Home() {
       color: "from-[#0f75bc] via-[#084f79] to-[#032841]",
     },
     {
-      title: "JETA Fin",
-      description:
-        "We make achieving academic dreams easier for you with this plan. This service provides student loans that cover up to 99% of your tuition and living expenses, all without requiring collateral. Our loan structure is designed to reduce financial stress, allowing students to focus entirely on their studies and personal growth instead of worrying about expenses.",
-      image: "/jeta-fin.jpg",
-      color: "from-[#0f75bc] via-[#084f79] to-[#032841]",
-    },
-    {
       title: "JETA Lab",
       description:
         "Creating a home away from home is our mission. Our JETA lab is a vibrant and welcoming community designed to enrich your personal life in a foreign country. At JETA Lab, you can forge meaningful friendships, exchange ideas, and connect with like-minded individuals from diverse backgrounds. JETA Lab also hosts skill-building workshops, group activities, and networking opportunities to help you grow personally and professionally.",
       image: "/jeta-lab.jpg",
+      color: "from-[#0f75bc] via-[#084f79] to-[#032841]",
+    },
+    {
+      title: "JETA Uni",
+      description:
+        "Many students face challenges finding part-time jobs or reliable earning opportunities while studying abroad. That’s why JETA Uni offers a free forex trading course, covering everything from basic to advanced strategies. Our program equips students with valuable income-generating skills, providing a sustainable alternative to traditional part-time jobs and paving the way for financial independence.",
+      image: "/jeta-uni.jpg",
       color: "from-[#0f75bc] via-[#084f79] to-[#032841]",
     },
   ];
@@ -54,10 +55,13 @@ export default function Home() {
 
   const bannerData = [
     {
-      imageUrl: '/banner3.jpg',
+      imageUrl: '/banner-01.jpg',
     },
     {
-      imageUrl: '/banner2.jpg',
+      imageUrl: '/banner-02.jpg',
+    },
+    {
+      imageUrl: '/IMG-20250108-WA0035.jpg',
     },
     {
       imageUrl: '/banner11.jpg',
@@ -101,21 +105,29 @@ export default function Home() {
           {bannerData.map((banner, idx) => (
             <SwiperSlide key={idx} className="relative">
               {/* Banner Content */}
-              <Image
+              <img
               src={banner.imageUrl}
               alt={'banner'}
-              width={1920}
-              height={601}
-              priority
-              className='w-full h-56 md:h-[calc(100vh-120px)] mx-auto object-cover'
+              width={2560}
+              height={801}
+              
+              className='w-full  mx-auto object-cover'
               />
                 {(banner.heading && banner.buttonText) && (
                 <div className="absolute top-1/2 left-4 md:left-24 transform -translate-y-1/2 text-[#0f75bc]">
-                  <h1 className='font-black font-poppins text-3xl md:text-8xl leading-3 md:leading-[52px]'>USA intake </h1>
-                  <p className='text-xl mt-1 leading-4 md:text-5xl font-medium'>are open now</p>
-                  <Button onClick={handleScrollToContact} text='Get Your Free Consultation' className='w-fit text-xs md:text-base px-3 py-3 md:px-10 md:py-[10px] rounded-xl mt-6' />
+                  <h1 className='font-black font-poppins text-xl md:text-8xl leading-2 md:leading-[52px]'>USA intake </h1>
+                  <p className='text-lg mt-1 leading-none md:text-5xl font-medium'>are open now</p>
+                  <Button onClick={handleScrollToContact} text='Get Your Free Consultation' className='w-fit text-[10px] md:text-base px-2 py-1 md:px-10 md:py-[10px] rounded-xl mt-2 md:mt-6' />
                 </div>
-                )}
+              )}
+              {idx === 2 && (
+                <div className="absolute top-1/2 right-4 md:right-24 transform -translate-y-1/2 flex flex-col items-start text-[#0f75bc]">
+                  <h1 className='font-bold font-poppins text-3xl md:text-7xl leading-tight md:leading-tight'>UNIQUEST</h1>
+                  <p className='text-lg mt-2 leading-tight md:text-4xl font-semibold'>Virtual Event</p>
+                  <p className='text-lg mt-1 leading-tight md:text-4xl font-semibold'>On Jan 28th</p>
+                  <Button onClick={handleScrollToContact} text='Register Now' className='w-fit text-sm md:text-base px-4 py-2 rounded-lg mt-4 md:mt-6 bg-[#0f75bc] text-white hover:bg-[#0a4a80]' />
+                </div>
+              )}
             </SwiperSlide>
           ))}
 
@@ -184,8 +196,19 @@ export default function Home() {
           </div>
         </form>
       </section> */}
-      <section className="pt-5 pb-10 px-4 md:px-7 lg:px-14 text-center">
+      <section className="relative pt-5 pb-10 px-4 md:px-7 lg:px-14 text-center">
+        {/* Scroll Down Button */}
+        <div className="absolute top-5 right-5">
+          <button
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: "smooth" })}
+            className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
+          >
+            ▼
+          </button>
+        </div>
+
         <InteractiveGlobe />
+
         <h4 className="relative text-xl md:text-2xl font-poppins font-semibold text-gray-800 mt-6 text-center">
           No Borders, Just Dreams -
           <span className="text-blue-500 underline decoration-dotted decoration-2 underline-offset-4">
@@ -193,7 +216,18 @@ export default function Home() {
           </span>
         </h4>
 
+        {/* Scroll Up Button */}
+        <div className="absolute bottom-5 right-5">
+          <button
+            onClick={() => window.scrollBy({ top: -window.innerHeight, behavior: "smooth" })}
+            className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
+          >
+            ▲
+          </button>
+        </div>
       </section>
+
+
       <StudentJourney />
       <section className='px-4 md:px-7 lg:px-14 py-20'>
         <h4 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mt-6">
@@ -238,6 +272,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FAQs/>
     </>
 
   );

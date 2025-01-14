@@ -17,8 +17,8 @@ const ServiceCard: React.FC<SlideCardProps> = ({  description, image }) => {
                             className="object-cover cursor-pointer object-left h-full w-full rounded-xl"
                             src={image}
                             alt={'service'}
-                            width={320}
-                            height={320}
+                            width={2480}
+                            height={3508}
                         />
                 </div>
                 {/* Back Face */}

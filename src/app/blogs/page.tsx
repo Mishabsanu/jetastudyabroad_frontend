@@ -1,10 +1,8 @@
 import MotionContainer from "@/components/MotionContainer/MotionContainer";
 import MotionItem from "@/components/MotionItem/MotionItem";
-
-
+import Link from "next/link";
 
 export default function Page() {
-
     return (
         <>
             {/* Banner Section */}
@@ -25,75 +23,75 @@ export default function Page() {
                     <h2 className="font-manrope text-4xl font-bold text-gray-900 text-center">Our Latest Blog</h2>
                     <div className='bg-[#0f75bc] w-20 h-[3px] mx-auto mb-16'></div>
 
-
                     {/* Motion Container for Blog Post Animation */}
                     <MotionContainer classNames="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-                        {/* Blog 1 */}
+
+                        {/* Blog 1: US Visa Guide */}
                         <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
-                                    src="https://pagedone.io/asset/uploads/1696244317.png"
-                                    alt="Clever ways to invest in product to organize your portfolio"
+                                    src="/us-visa-banner.png"
+                                    alt="US Visa Guide"
                                     className="rounded-t-2xl w-full object-cover"
                                 />
                             </div>
                             <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                                <span className="text-indigo-600 font-medium mb-3 block">Jan 01, 2023</span>
+                                <span className="text-indigo-600 font-medium mb-3 block">Jan 10, 2025</span>
                                 <h4 className="text-xl text-gray-900 font-medium leading-8 mb-5">
-                                    Clever ways to invest in product to organize your portfolio
+                                    Looking for a US Visa to Study Abroad? Here is Your Complete Guide.
                                 </h4>
                                 <p className="text-gray-500 leading-6 mb-10">
-                                    Discover smart investment strategies to streamline and organize your portfolio.
+                                    Learn about the step-by-step process of obtaining a US student visa with expert tips.
                                 </p>
-                                <a href="#" className="cursor-pointer text-lg text-indigo-600 font-semibold">
+                                <Link href="/blogs/us-visa-guide-2025" className="cursor-pointer text-lg text-indigo-600 font-semibold">
                                     Read more..
-                                </a>
+                                </Link>
                             </div>
                         </MotionItem>
 
-                        {/* Blog 2 */}
+                        {/* Blog 2: MRes in the UK */}
                         <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
-                                    src="https://pagedone.io/asset/uploads/1696244340.png"
-                                    alt="How to grow your profit through systematic investment with us"
+                                    src="/mres-uk-banner.png"
+                                    alt="MRes in the UK"
                                     className="rounded-t-2xl w-full object-cover"
                                 />
                             </div>
                             <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                                <span className="text-indigo-600 font-medium mb-3 block">Feb 01, 2023</span>
+                                <span className="text-indigo-600 font-medium mb-3 block">Jan 12, 2025</span>
                                 <h4 className="text-xl text-gray-900 font-medium leading-8 mb-5">
-                                    How to grow your profit through systematic investment with us
+                                    MRes Degree in the UK 2025: A Complete Guide to Its Opportunities & Features.
                                 </h4>
                                 <p className="text-gray-500 leading-6 mb-10">
-                                    Unlock the power of systematic investment with us and watch your profits soar.
+                                    Explore why the UK is the perfect destination for your MRes program.
                                 </p>
-                                <a href="#" className="cursor-pointer text-lg text-indigo-600 font-semibold">
+                                <Link href="/blogs/mres-in-uk-2025" className="cursor-pointer text-lg text-indigo-600 font-semibold">
                                     Read more..
-                                </a>
+                                </Link>
                             </div>
                         </MotionItem>
 
-                        {/* Blog 3 */}
+                        {/* Blog 3: Diploma Programs in Spain */}
                         <MotionItem classNames="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-lg hover:border-indigo-600 cursor-pointer">
                             <div className="flex items-center">
                                 <img
-                                    src="https://pagedone.io/asset/uploads/1696244356.png"
-                                    alt="How to analyze every holdings of your portfolio"
+                                    src="/spain-diploma-banner.png"
+                                    alt="Diploma Programs in Spain"
                                     className="rounded-t-2xl w-full object-cover"
                                 />
                             </div>
                             <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
-                                <span className="text-indigo-600 font-medium mb-3 block">Mar 01, 2023</span>
+                                <span className="text-indigo-600 font-medium mb-3 block">Jan 14, 2025</span>
                                 <h4 className="text-xl text-gray-900 font-medium leading-8 mb-5">
-                                    How to analyze every holdings of your portfolio
+                                    Start Your Adventure: Presenting Spain&apos;s Finest Diploma Programs.
                                 </h4>
                                 <p className="text-gray-500 leading-6 mb-10">
-                                    Our comprehensive guide will equip you with the tools and insights needed to optimize your portfolio.
+                                    Discover top diploma programs in Tourism Management and Spanish Cuisine.
                                 </p>
-                                <a href="#" className="cursor-pointer text-lg text-indigo-600 font-semibold">
+                                <Link href="/blogs/diploma-programs-spain" className="cursor-pointer text-lg text-indigo-600 font-semibold">
                                     Read more..
-                                </a>
+                                </Link>
                             </div>
                         </MotionItem>
                     </MotionContainer>
