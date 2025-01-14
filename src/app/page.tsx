@@ -55,10 +55,10 @@ export default function Home() {
 
   const bannerData = [
     {
-      imageUrl: '/banner-01.jpg',
+      imageUrl: '/Banner-01.jpg',
     },
     {
-      imageUrl: '/banner-02.jpg',
+      imageUrl: '/Banner-02.jpg',
     },
     {
       imageUrl: '/IMG-20250108-WA0035.jpg',
