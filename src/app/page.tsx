@@ -97,7 +97,7 @@ export default function Home() {
           }}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           modules={[Pagination, Navigation, Autoplay]}
           className="relative"
@@ -122,10 +122,10 @@ export default function Home() {
               )}
               {idx === 2 && (
                 <div className="absolute top-1/2 right-4 md:right-24 transform -translate-y-1/2 flex flex-col items-start text-[#0f75bc]">
-                  <h1 className='font-bold font-poppins text-3xl md:text-7xl leading-tight md:leading-tight'>UNIQUEST</h1>
-                  <p className='text-lg mt-2 leading-tight md:text-4xl font-semibold'>Virtual Event</p>
-                  <p className='text-lg mt-1 leading-tight md:text-4xl font-semibold'>On Jan 28th</p>
-                  <Button onClick={handleScrollToContact} text='Register Now' className='w-fit text-sm md:text-base px-4 py-2 rounded-lg mt-4 md:mt-6 bg-[#0f75bc] text-white hover:bg-[#0a4a80]' />
+                  <h1 className='font-bold font-poppins text-xl/[20px] md:text-7xl md:leading-tight'>UNIQUEST</h1>
+                  <p className='text-base md:mt-2 md:text-4xl font-semibold'>Virtual Event</p>
+                  <p className='text-base/[8px] md:mt-1 md:text-4xl font-semibold'>On Jan 28th</p>
+                  <Button onClick={handleScrollToContact} text='Registor Now' className='w-fit md:text-base px-3 py-0.5 md:px-10 md:py-[10px] rounded-xl mt-2 md:mt-6 text-xs' />
                 </div>
               )}
             </SwiperSlide>
@@ -198,14 +198,7 @@ export default function Home() {
       </section> */}
       <section className="relative pt-5 pb-10 px-4 md:px-7 lg:px-14 text-center">
         {/* Scroll Down Button */}
-        <div className="absolute top-5 right-5">
-          <button
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: "smooth" })}
-            className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
-          >
-            ▼
-          </button>
-        </div>
+
 
         <InteractiveGlobe />
 
@@ -216,15 +209,6 @@ export default function Home() {
           </span>
         </h4>
 
-        {/* Scroll Up Button */}
-        <div className="absolute bottom-5 right-5">
-          <button
-            onClick={() => window.scrollBy({ top: -window.innerHeight, behavior: "smooth" })}
-            className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
-          >
-            ▲
-          </button>
-        </div>
       </section>
 
 

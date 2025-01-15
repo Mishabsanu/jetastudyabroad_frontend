@@ -62,7 +62,15 @@ export default function InteractiveGlobe() {
     }, []);
 
     return (
-        <div className="relative md:max-w-3xl mx-auto" ref={globeContainerRef}>
+        <div className="flex justify-center relative" ref={globeContainerRef}>
+            <div className="absolute top-5 right-5 z-[10]">
+                <button
+                    onClick={() => window.scrollBy({ top: 300, behavior: "smooth" })}
+                    className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
+                >
+                    ▼
+                </button>
+            </div>
             <Globe
                 ref={globeEl}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -121,6 +129,15 @@ export default function InteractiveGlobe() {
 
             // onLabelClick={(d: any) => alert(`${d.properties.name}: ${d.properties.info}`)}
             />
+            {/* Scroll Up Button */}
+            <div className="absolute bottom-5 right-5 z-[10]">
+                <button
+                    onClick={() => window.scrollBy({ top: -window.innerHeight, behavior: "smooth" })}
+                    className="px-2 py-1 flex justify-center items-center text-center bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600"
+                >
+                    ▲
+                </button>
+            </div>
         </div>
 
     );
