@@ -125,7 +125,7 @@ export default function Home() {
                   <h1 className='font-bold font-poppins text-xl/[20px] md:text-7xl md:leading-tight'>UNIQUEST</h1>
                   <p className='text-base md:mt-2 md:text-4xl font-semibold'>Virtual Event</p>
                   <p className='text-base/[8px] md:mt-1 md:text-4xl font-semibold'>On Jan 28th</p>
-                  <Button onClick={handleScrollToContact} text='Registor Now' className='w-fit md:text-base px-3 py-0.5 md:px-10 md:py-[10px] rounded-xl mt-2 md:mt-6 text-xs' />
+                  <Button onClick={handleScrollToContact} text='Register Now' className='w-fit md:text-base px-3 py-0.5 md:px-10 md:py-[10px] rounded-xl mt-2 md:mt-6 text-xs' />
                 </div>
               )}
             </SwiperSlide>
