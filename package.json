@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.15.0",
+    "axios": "^1.7.9",
+    "framer-motion": "^11.18.1",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-globe.gl": "^2.27.6",
     "react-hook-form": "^7.54.1",
     "react-player": "^2.16.0",
+    "sonner": "^1.7.2",
     "swiper": "^11.1.14",
     "three": "^0.171.0"
   },
