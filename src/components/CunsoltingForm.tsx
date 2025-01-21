@@ -63,11 +63,11 @@ export default function ConsultingForm() {
   
     try {
       const response = await axiosInstance.post(
-        "/user-enquiry/add-user-enquiry",
+        "https://jetastudyabroad-backend.onrender.com/api/V1/user-enquiry/add-user-enquiry",
         data
       );
       console.log("Response: ", response.data);
-      toast.success("Form submitted successfully!");
+      toast.success("Form submitted successfullyx!");
       reset();
     } catch (error) {
       console.log(error, "error");
