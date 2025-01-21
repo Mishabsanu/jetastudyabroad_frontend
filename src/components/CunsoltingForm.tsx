@@ -67,7 +67,7 @@ export default function ConsultingForm() {
         data
       );
       console.log("Response: ", response.data);
-      toast.success("Form submitted successfullyx!");
+      toast.success("Form submitted successfully!");
       reset();
     } catch (error) {
       console.log(error, "error");
