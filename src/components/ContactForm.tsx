@@ -60,7 +60,7 @@ export default function ContactForm() {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       const response = await axiosInstance.post(
-        "/user-enquiry/add-user-enquiry",
+        "https://jetastudyabroad-backend.onrender.com/api/V1/user-enquiry/add-user-enquiry",
         data
       );
       console.log("Response: ", response.data);
